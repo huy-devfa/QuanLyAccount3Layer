@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using QuanLyAccount3Layer.DAL;
+using System.Diagnostics.Eventing.Reader;
+
+namespace QuanLyAccount3Layer.BLL
+{
+    internal class Users
+    {
+        Providers providers = new Providers();
+        public SqlConnection Connection()
+        {
+            return providers.connection;
+        }//ket thuc Connection
+
+        public Boolean Connect()
+        {
+            return providers.Connect();
+        }//ket thuc Connect()
+
+        public void Disconnect()
+        {
+            providers.Disconnect();
+        }//ket thuc Disconnect()
+
+        //Viet ham CheckUser voi tham so truyen vao la ten tai khoan va mat khau
+        //Ket qua tra ve 1 la User va mat khau da ton tai trong Table Users nguoc lai tra ve 0  la User va mat khau chua co trong Table
+
+        public int CheckUser(string User, string Pass, string vaitro)
+        {
+            providers.Connect();
+            string strsql = "Select count(*) from Users where ((username=@TaiKhoan) and (pass=@MatKhau)) and (vaitro=@PVaitro)";
+
+            SqlCommand Cmd = new SqlCommand(strsql, Connection());
+
+            SqlParameter para1 = new SqlParameter("@TaiKhoan", User);
+            SqlParameter para2 = new SqlParameter("@MatKhau", Pass);
+            SqlParameter para3 = new SqlParameter("@PVaitro", vaitro);
+                
+            Cmd.Parameters.Add(para1);
+            Cmd.Parameters.Add(para2);
+            Cmd.Parameters.Add(para3);
+            //tao cac Parameters cho cau lenh SQL
+            //Cmd.Parameters.Add(new SqlParameter("@TaiKhoan", User));
+            //Cmd.Parameters.Add(new SqlParameter("@MatKhauNguoiDung",Pass));
+
+            int kqsql = (int)Cmd.ExecuteScalar();
+            return kqsql;
+        }//ket thuc CheckUser
+
+        public int UserExecuteNonQuery(string queryOrSpName, string[] Parameters, object[] Values, bool isStored)
+        {
+            return providers.ExecuteNonQuery(queryOrSpName, Parameters, Values, isStored);
+        }//Kết thúc UserExecuteNonQuery
+
+        public int UserExecuteScalar(string queryOrSpName, string[] Parameters, object[] Values)
+        {
+            return providers.ExecuteScalar(queryOrSpName, Parameters, Values);
+        }//Kết thúc UserExecuteScalar
+
+    }
+}

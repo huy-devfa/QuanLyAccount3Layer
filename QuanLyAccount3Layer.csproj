@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{734F51FB-C4C1-474D-9DB8-55556738A1E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyAccount3Layer</RootNamespace>
+    <AssemblyName>QuanLyAccount3Layer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ThongTinThanhToan.cs" />
+    <Compile Include="BLL\Users.cs" />
+    <Compile Include="DAL\Providers.cs" />
+    <Compile Include="GUI\Admin\frmAdmin_Thongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmAdmin_Thongke.Designer.cs">
+      <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\frmThongTinThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\frmThongTinThanhToan.Designer.cs">
+      <DependentUpon>frmThongTinThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\System\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\System\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\System\frmregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\System\frmregister.Designer.cs">
+      <DependentUpon>frmregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\frmAdmin_Thongke.resx">
+      <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\frmThongTinThanhToan.resx">
+      <DependentUpon>frmThongTinThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\System\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\System\frmregister.resx">
+      <DependentUpon>frmregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="images\Banks\acc vip.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo-no-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-grayscale-inverted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-no-background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppData\QuanLyAccount3Layer.sql" />
+    <Content Include="Icons\add.ico" />
+    <Content Include="Icons\alert.ico" />
+    <Content Include="Icons\apply.ico" />
+    <Content Include="Icons\danger.ico" />
+    <Content Include="Icons\delete.ico" />
+    <Content Include="Icons\exit.ico" />
+    <Content Include="Icons\undo.ico" />
+    <Content Include="Icons\wrench.ico" />
+    <Content Include="images\Banks\AbBank.png" />
+    <Content Include="images\Banks\ACB.png" />
+    <Content Include="images\Banks\Agribank.png" />
+    <Content Include="images\Banks\BacABank.png" />
+    <Content Include="images\Banks\BaoVietBank.png" />
+    <Content Include="images\Banks\BIDV.png" />
+    <Content Include="images\Banks\DongA.png" />
+    <Content Include="images\Banks\EximBank.png" />
+    <Content Include="images\Banks\HDBank.png" />
+    <Content Include="images\Banks\KienLongBank.png" />
+    <Content Include="images\Banks\LienVietPostBank.png" />
+    <Content Include="images\Banks\MaRiTimeBank.png" />
+    <Content Include="images\Banks\MBBANK.png" />
+    <Content Include="images\Banks\NamABank.png" />
+    <Content Include="images\Banks\NCB.png" />
+    <Content Include="images\Banks\OCB.png" />
+    <Content Include="images\Banks\OceanBank.png" />
+    <Content Include="images\Banks\PVcomBank.png" />
+    <Content Include="images\Banks\SaComBank.png" />
+    <Content Include="images\Banks\SCB.png" />
+    <Content Include="images\Banks\Screenshot 2025-04-25 072735.png" />
+    <Content Include="images\Banks\Screenshot 2025-04-25 072741.png" />
+    <Content Include="images\Banks\SHBank.png" />
+    <Content Include="images\Banks\TechComBank.png" />
+    <Content Include="images\Banks\TpBank.png" />
+    <Content Include="images\Banks\VIB.png" />
+    <Content Include="images\Banks\VietABank.png" />
+    <Content Include="images\Banks\VietBank.png" />
+    <Content Include="images\Banks\VietComBank.png" />
+    <Content Include="images\Banks\ViettinBank.png" />
+    <Content Include="images\Banks\VPBank.png" />
+    <Content Include="images\MoMat.png" />
+    <Content Include="images\NhamMat.png" />
+    <None Include="images\ShopTuDoi1.png" />
+    <None Include="images\ShopTuDoi.png" />
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

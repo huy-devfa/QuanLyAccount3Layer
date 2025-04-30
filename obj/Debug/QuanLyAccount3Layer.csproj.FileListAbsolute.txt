@@ -1,0 +1,14 @@
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\bin\Debug\QuanLyAccount3Layer.exe.config
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\bin\Debug\QuanLyAccount3Layer.exe
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\bin\Debug\QuanLyAccount3Layer.pdb
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.csproj.AssemblyReference.cache
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.frmLogin.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.frmMain.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.Properties.Resources.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.csproj.GenerateResource.cache
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.csproj.CoreCompileInputs.cache
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.exe
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.pdb
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.frmregister.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.frmAdmin_Thongke.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.Admin.frmThongTinThanhToan.resources
