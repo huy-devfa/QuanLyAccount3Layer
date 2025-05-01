@@ -50,10 +50,13 @@
             this.lblTongDoanhThu = new System.Windows.Forms.Label();
             this.lblXinChaoUser = new System.Windows.Forms.Label();
             this.btnTaiLai = new System.Windows.Forms.Button();
+            this.grBoxTongTienConLaiCuaKhachHang = new System.Windows.Forms.GroupBox();
+            this.lblTongTienConLaiCuaKhachHang = new System.Windows.Forms.Label();
             this.mnuAdmin.SuspendLayout();
             this.grBoxTongKhachHang.SuspendLayout();
             this.grBoxTongTaiKhoanDaBan.SuspendLayout();
             this.grBoxTongDoanhThu.SuspendLayout();
+            this.grBoxTongTienConLaiCuaKhachHang.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuAdmin
@@ -65,7 +68,7 @@
             this.mnuAdmin.Location = new System.Drawing.Point(0, 0);
             this.mnuAdmin.Name = "mnuAdmin";
             this.mnuAdmin.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuAdmin.Size = new System.Drawing.Size(410, 24);
+            this.mnuAdmin.Size = new System.Drawing.Size(879, 24);
             this.mnuAdmin.TabIndex = 0;
             this.mnuAdmin.Text = "menuStrip1";
             // 
@@ -161,14 +164,15 @@
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Name = "mnuAdmin_QuanLy_QuanLyKhachHang";
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Size = new System.Drawing.Size(180, 22);
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Text = "Quản lý khách hàng";
+            this.mnuAdmin_QuanLy_QuanLyKhachHang.Click += new System.EventHandler(this.mnuAdmin_QuanLy_QuanLyKhachHang_Click);
             // 
             // grBoxTongKhachHang
             // 
             this.grBoxTongKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(114)))), ((int)(((byte)(108)))));
             this.grBoxTongKhachHang.Controls.Add(this.lblTongKhachHang);
             this.grBoxTongKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBoxTongKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grBoxTongKhachHang.Location = new System.Drawing.Point(16, 93);
+            this.grBoxTongKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(85)))));
+            this.grBoxTongKhachHang.Location = new System.Drawing.Point(220, 93);
             this.grBoxTongKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongKhachHang.Name = "grBoxTongKhachHang";
             this.grBoxTongKhachHang.Padding = new System.Windows.Forms.Padding(2);
@@ -194,8 +198,8 @@
             this.grBoxTongTaiKhoanDaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(239)))), ((int)(((byte)(78)))));
             this.grBoxTongTaiKhoanDaBan.Controls.Add(this.lblTongTaiKhoanDaBan);
             this.grBoxTongTaiKhoanDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBoxTongTaiKhoanDaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grBoxTongTaiKhoanDaBan.Location = new System.Drawing.Point(220, 93);
+            this.grBoxTongTaiKhoanDaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(85)))));
+            this.grBoxTongTaiKhoanDaBan.Location = new System.Drawing.Point(641, 93);
             this.grBoxTongTaiKhoanDaBan.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongTaiKhoanDaBan.Name = "grBoxTongTaiKhoanDaBan";
             this.grBoxTongTaiKhoanDaBan.Padding = new System.Windows.Forms.Padding(2);
@@ -221,8 +225,8 @@
             this.grBoxTongDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(186)))), ((int)(((byte)(46)))));
             this.grBoxTongDoanhThu.Controls.Add(this.lblTongDoanhThu);
             this.grBoxTongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grBoxTongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grBoxTongDoanhThu.Location = new System.Drawing.Point(16, 230);
+            this.grBoxTongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(85)))));
+            this.grBoxTongDoanhThu.Location = new System.Drawing.Point(437, 230);
             this.grBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongDoanhThu.Name = "grBoxTongDoanhThu";
             this.grBoxTongDoanhThu.Padding = new System.Windows.Forms.Padding(2);
@@ -259,28 +263,58 @@
             // 
             this.btnTaiLai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnTaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiLai.Location = new System.Drawing.Point(310, 37);
+            this.btnTaiLai.Location = new System.Drawing.Point(641, 350);
             this.btnTaiLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(86, 46);
+            this.btnTaiLai.Size = new System.Drawing.Size(176, 46);
             this.btnTaiLai.TabIndex = 3;
             this.btnTaiLai.Text = "Tải lại ";
             this.btnTaiLai.UseVisualStyleBackColor = false;
             this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
+            // grBoxTongTienConLaiCuaKhachHang
+            // 
+            this.grBoxTongTienConLaiCuaKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.grBoxTongTienConLaiCuaKhachHang.Controls.Add(this.lblTongTienConLaiCuaKhachHang);
+            this.grBoxTongTienConLaiCuaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grBoxTongTienConLaiCuaKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(85)))));
+            this.grBoxTongTienConLaiCuaKhachHang.Location = new System.Drawing.Point(16, 230);
+            this.grBoxTongTienConLaiCuaKhachHang.Margin = new System.Windows.Forms.Padding(2);
+            this.grBoxTongTienConLaiCuaKhachHang.Name = "grBoxTongTienConLaiCuaKhachHang";
+            this.grBoxTongTienConLaiCuaKhachHang.Padding = new System.Windows.Forms.Padding(2);
+            this.grBoxTongTienConLaiCuaKhachHang.Size = new System.Drawing.Size(380, 116);
+            this.grBoxTongTienConLaiCuaKhachHang.TabIndex = 1;
+            this.grBoxTongTienConLaiCuaKhachHang.TabStop = false;
+            this.grBoxTongTienConLaiCuaKhachHang.Text = "Tổng tiền còn lại của khách hàng";
+            // 
+            // lblTongTienConLaiCuaKhachHang
+            // 
+            this.lblTongTienConLaiCuaKhachHang.AutoSize = true;
+            this.lblTongTienConLaiCuaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTienConLaiCuaKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.lblTongTienConLaiCuaKhachHang.Location = new System.Drawing.Point(4, 71);
+            this.lblTongTienConLaiCuaKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTongTienConLaiCuaKhachHang.Name = "lblTongTienConLaiCuaKhachHang";
+            this.lblTongTienConLaiCuaKhachHang.Size = new System.Drawing.Size(26, 29);
+            this.lblTongTienConLaiCuaKhachHang.TabIndex = 0;
+            this.lblTongTienConLaiCuaKhachHang.Text = "0";
+            // 
             // frmAdmin_Thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 357);
+            this.ClientSize = new System.Drawing.Size(879, 406);
             this.Controls.Add(this.btnTaiLai);
             this.Controls.Add(this.lblXinChaoUser);
+            this.Controls.Add(this.grBoxTongTienConLaiCuaKhachHang);
             this.Controls.Add(this.grBoxTongDoanhThu);
             this.Controls.Add(this.grBoxTongTaiKhoanDaBan);
             this.Controls.Add(this.grBoxTongKhachHang);
             this.Controls.Add(this.mnuAdmin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mnuAdmin;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmAdmin_Thongke";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.frmAdmin_Thongke_Load);
@@ -292,6 +326,8 @@
             this.grBoxTongTaiKhoanDaBan.PerformLayout();
             this.grBoxTongDoanhThu.ResumeLayout(false);
             this.grBoxTongDoanhThu.PerformLayout();
+            this.grBoxTongTienConLaiCuaKhachHang.ResumeLayout(false);
+            this.grBoxTongTienConLaiCuaKhachHang.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +357,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_HeThong_Thoat;
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_QuanLy_QuanLyTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_QuanLy_QuanLyKhachHang;
+        private System.Windows.Forms.GroupBox grBoxTongTienConLaiCuaKhachHang;
+        private System.Windows.Forms.Label lblTongTienConLaiCuaKhachHang;
     }
 }

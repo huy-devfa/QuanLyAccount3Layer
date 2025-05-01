@@ -12,6 +12,7 @@ using QuanLyAccount3Layer.BLL;
 using System.Data.SqlClient;
 using System.Configuration;
 using QuanLyAccount3Layer.DAL;
+using QuanLyAccount3Layer.GUI.Admin.mnuQuanLy;
 
 namespace QuanLyAccount3Layer.GUI
 {
@@ -43,7 +44,8 @@ namespace QuanLyAccount3Layer.GUI
             {
                 lblTongKhachHang.Text = user.Count_User().ToString();
                 lblTongTaiKhoanDaBan.Text = user.Count_SoldAccount().ToString();
-                lblTongDoanhThu.Text = user.Sum_Revenue().ToString();
+                lblTongDoanhThu.Text = user.Sum_Revenue().ToString() + " vnđ";
+                lblTongTienConLaiCuaKhachHang.Text = user.Sum_TotalUserBalance().ToString() + " vnđ";
             }
             else
             {
@@ -60,6 +62,12 @@ namespace QuanLyAccount3Layer.GUI
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
             LoadAdmin();
+        }
+
+        private void mnuAdmin_QuanLy_QuanLyKhachHang_Click(object sender, EventArgs e)
+        {
+            frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+            qlkh.Show();
         }
     }
 }

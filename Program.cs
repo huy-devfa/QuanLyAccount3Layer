@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyAccount3Layer.GUI;
 using QuanLyAccount3Layer.GUI.Admin;
+using QuanLyAccount3Layer.GUI.Admin.mnuQuanLy;
 using QuanLyAccount3Layer.GUI.User.mnuTienIch;
 
 namespace QuanLyAccount3Layer

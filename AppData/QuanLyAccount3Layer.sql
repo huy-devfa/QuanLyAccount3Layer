@@ -5,6 +5,7 @@ create table Users(
 	pass char(100)
 )
 
+
 alter table Users add SoDu int
 
 alter table Users add constraint ck1_sodu check (sodu>=0)
@@ -17,6 +18,18 @@ alter table Users add constraint default1_sodu default 0 for sodu
 alter table Users add constraint default_ default'User' for vaitro
 
 select * from Users
+
+--proceduce Update Users
+create proc Usp_UpdateUsers
+	@Pusername char(16),
+	@Ppass char(100),
+	@Psodu int,
+	@Pvaitro char(50)
+as
+begin
+	update Users set pass=@Ppass, SoDu=@Psodu, vaitro=@Pvaitro where username=@Pusername
+end
+
 
 create table Accounts(
 	idTaiKhoan int not null primary key,

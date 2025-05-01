@@ -54,6 +54,13 @@ namespace QuanLyAccount3Layer.BLL
             return kqsql;
         }//ket thuc CheckUser
 
+
+        public DataTable GetDataUser()
+        {
+            string[] parameters = { };
+            string[] values = { };
+            return providers.GetData("Select * from Users",parameters,values,false);
+        }//ket thuc GetDataUser()
         public int Count_User()
         {
             providers.Connect();
@@ -62,7 +69,7 @@ namespace QuanLyAccount3Layer.BLL
             SqlCommand cmd = new SqlCommand(query, Connection());
 
             return (int)cmd.ExecuteScalar();
-        }
+        }//ket thuc Count_User()
 
         public int Count_SoldAccount()
         {
@@ -73,7 +80,7 @@ namespace QuanLyAccount3Layer.BLL
             SqlCommand cmd = new SqlCommand(query, Connection());
 
             return (int)cmd.ExecuteScalar();
-        }
+        }//ket thuc Count_SoldAccount()
 
         public Decimal Sum_Revenue()
         {
@@ -84,7 +91,19 @@ namespace QuanLyAccount3Layer.BLL
             SqlCommand cmd = new SqlCommand(query, Connection());
 
             return Convert.ToDecimal(cmd.ExecuteScalar());
-        }
+        }//Ket thuc Sum_Revenue()
+
+        public decimal Sum_TotalUserBalance()
+        {
+            providers.Connect();
+
+            string query = "Select sum(sodu) from Users where vaitro='User'";
+
+            SqlCommand cmd = new SqlCommand(query, Connection());
+
+            return Convert.ToDecimal(cmd.ExecuteScalar());
+        }//ket thuc Sum_TotalUserBalance()
+
         public int UserExecuteNonQuery(string queryOrSpName, string[] Parameters, object[] Values, bool isStored)
         {
             return providers.ExecuteNonQuery(queryOrSpName, Parameters, Values, isStored);
