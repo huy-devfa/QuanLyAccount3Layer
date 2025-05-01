@@ -12,3 +12,4 @@ D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3L
 D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.frmregister.resources
 D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.frmAdmin_Thongke.resources
 D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.Admin.frmThongTinThanhToan.resources
+D:\HỌC CSHARP\LAPTRINHCOSODULIEU\QuanLyAccount3Layer\obj\Debug\QuanLyAccount3Layer.GUI.User.mnuTienIch.frmCatChuoi.resources

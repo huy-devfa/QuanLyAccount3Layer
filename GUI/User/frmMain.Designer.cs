@@ -49,8 +49,8 @@
             this.mnuTaiKhoan_NapTien_NganHang = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaiKhoan_SoDu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTaiKhoan_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuTaiKhoan_QuanTri = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,7 @@
             this.mnuTienich_CatChuoi.Name = "mnuTienich_CatChuoi";
             this.mnuTienich_CatChuoi.Size = new System.Drawing.Size(180, 22);
             this.mnuTienich_CatChuoi.Text = "Cắt chuỗi";
+            this.mnuTienich_CatChuoi.Click += new System.EventHandler(this.mnuTienich_CatChuoi_Click);
             // 
             // mnuTienich_GhepChuoi
             // 
@@ -128,7 +129,7 @@
             // mnuDonHang_DonHangDaMua
             // 
             this.mnuDonHang_DonHangDaMua.Name = "mnuDonHang_DonHangDaMua";
-            this.mnuDonHang_DonHangDaMua.Size = new System.Drawing.Size(180, 22);
+            this.mnuDonHang_DonHangDaMua.Size = new System.Drawing.Size(169, 22);
             this.mnuDonHang_DonHangDaMua.Text = "Đơn hàng đã mua";
             // 
             // mnuBienDongSoDu
@@ -142,7 +143,7 @@
             // mnuBienDongSoDu_LichSuBienDong
             // 
             this.mnuBienDongSoDu_LichSuBienDong.Name = "mnuBienDongSoDu_LichSuBienDong";
-            this.mnuBienDongSoDu_LichSuBienDong.Size = new System.Drawing.Size(180, 22);
+            this.mnuBienDongSoDu_LichSuBienDong.Size = new System.Drawing.Size(168, 22);
             this.mnuBienDongSoDu_LichSuBienDong.Text = "Lịch sử biến động";
             // 
             // mnuTaiKhoan
@@ -161,13 +162,13 @@
             // mnuTaiKhoan_ThongTin
             // 
             this.mnuTaiKhoan_ThongTin.Name = "mnuTaiKhoan_ThongTin";
-            this.mnuTaiKhoan_ThongTin.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_ThongTin.Size = new System.Drawing.Size(128, 22);
             this.mnuTaiKhoan_ThongTin.Text = "Thông tin";
             // 
             // mnuTaiKhoan_BaoMat
             // 
             this.mnuTaiKhoan_BaoMat.Name = "mnuTaiKhoan_BaoMat";
-            this.mnuTaiKhoan_BaoMat.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_BaoMat.Size = new System.Drawing.Size(128, 22);
             this.mnuTaiKhoan_BaoMat.Text = "Bảo mật";
             // 
             // mnuTaiKhoan_NapTien
@@ -176,45 +177,45 @@
             this.mnuTaiKhoan_NapTien_Momo,
             this.mnuTaiKhoan_NapTien_NganHang});
             this.mnuTaiKhoan_NapTien.Name = "mnuTaiKhoan_NapTien";
-            this.mnuTaiKhoan_NapTien.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_NapTien.Size = new System.Drawing.Size(128, 22);
             this.mnuTaiKhoan_NapTien.Text = "Nạp tiền";
             // 
             // mnuTaiKhoan_NapTien_Momo
             // 
             this.mnuTaiKhoan_NapTien_Momo.Name = "mnuTaiKhoan_NapTien_Momo";
-            this.mnuTaiKhoan_NapTien_Momo.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_NapTien_Momo.Size = new System.Drawing.Size(135, 22);
             this.mnuTaiKhoan_NapTien_Momo.Text = "Momo";
             // 
             // mnuTaiKhoan_NapTien_NganHang
             // 
             this.mnuTaiKhoan_NapTien_NganHang.Name = "mnuTaiKhoan_NapTien_NganHang";
-            this.mnuTaiKhoan_NapTien_NganHang.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_NapTien_NganHang.Size = new System.Drawing.Size(135, 22);
             this.mnuTaiKhoan_NapTien_NganHang.Text = "Ngân Hàng";
             // 
             // mnuTaiKhoan_SoDu
             // 
             this.mnuTaiKhoan_SoDu.Name = "mnuTaiKhoan_SoDu";
-            this.mnuTaiKhoan_SoDu.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_SoDu.Size = new System.Drawing.Size(128, 22);
             this.mnuTaiKhoan_SoDu.Text = "Số dư";
             // 
             // mnuTaiKhoan_DangXuat
             // 
             this.mnuTaiKhoan_DangXuat.Name = "mnuTaiKhoan_DangXuat";
-            this.mnuTaiKhoan_DangXuat.Size = new System.Drawing.Size(180, 22);
+            this.mnuTaiKhoan_DangXuat.Size = new System.Drawing.Size(128, 22);
             this.mnuTaiKhoan_DangXuat.Text = "Đăng xuất";
+            // 
+            // mnuTaiKhoan_QuanTri
+            // 
+            this.mnuTaiKhoan_QuanTri.Name = "mnuTaiKhoan_QuanTri";
+            this.mnuTaiKhoan_QuanTri.Size = new System.Drawing.Size(128, 22);
+            this.mnuTaiKhoan_QuanTri.Text = "Quản trị";
+            this.mnuTaiKhoan_QuanTri.Click += new System.EventHandler(this.mnuTaiKhoan_QuanTri_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // mnuTaiKhoan_QuanTri
-            // 
-            this.mnuTaiKhoan_QuanTri.Name = "mnuTaiKhoan_QuanTri";
-            this.mnuTaiKhoan_QuanTri.Size = new System.Drawing.Size(180, 22);
-            this.mnuTaiKhoan_QuanTri.Text = "Quản trị";
-            this.mnuTaiKhoan_QuanTri.Click += new System.EventHandler(this.mnuTaiKhoan_QuanTri_Click);
             // 
             // frmMain
             // 
@@ -223,7 +224,7 @@
             this.ClientSize = new System.Drawing.Size(830, 424);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMain_Load);

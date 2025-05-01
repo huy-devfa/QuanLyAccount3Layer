@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyAccount3Layer.GUI;
+using QuanLyAccount3Layer.GUI.User.mnuTienIch;
 
 namespace QuanLyAccount3Layer
 {
@@ -43,6 +44,12 @@ namespace QuanLyAccount3Layer
             frmAdmin_Thongke admin = new frmAdmin_Thongke(Current_User);
             admin.Show();
             
+        }
+
+        private void mnuTienich_CatChuoi_Click(object sender, EventArgs e)
+        {
+            frmCatChuoi catchuoi = new frmCatChuoi();
+            catchuoi.Show();
         }
     }
 }

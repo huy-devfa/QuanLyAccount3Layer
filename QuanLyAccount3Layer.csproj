@@ -56,10 +56,10 @@
     <Compile Include="GUI\Admin\frmAdmin_Thongke.Designer.cs">
       <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin\frmThongTinThanhToan.cs">
+    <Compile Include="GUI\Admin\mnuHeThong\frmThongTinThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin\frmThongTinThanhToan.Designer.cs">
+    <Compile Include="GUI\Admin\mnuHeThong\frmThongTinThanhToan.Designer.cs">
       <DependentUpon>frmThongTinThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\System\frmLogin.cs">
@@ -80,12 +80,24 @@
     <Compile Include="GUI\System\frmregister.Designer.cs">
       <DependentUpon>frmregister.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\mnuTienIch\frmCatChuoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\mnuTienIch\frmCatChuoi.Designer.cs">
+      <DependentUpon>frmCatChuoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\mnuTienIch\frmGhepChuoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\mnuTienIch\frmGhepChuoi.Designer.cs">
+      <DependentUpon>frmGhepChuoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Admin\frmAdmin_Thongke.resx">
       <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin\frmThongTinThanhToan.resx">
+    <EmbeddedResource Include="GUI\Admin\mnuHeThong\frmThongTinThanhToan.resx">
       <DependentUpon>frmThongTinThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\System\frmLogin.resx">
@@ -96,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\System\frmregister.resx">
       <DependentUpon>frmregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\mnuTienIch\frmCatChuoi.resx">
+      <DependentUpon>frmCatChuoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,9 +151,11 @@
     <Content Include="Icons\add.ico" />
     <Content Include="Icons\alert.ico" />
     <Content Include="Icons\apply.ico" />
+    <Content Include="Icons\copy.ico" />
     <Content Include="Icons\danger.ico" />
     <Content Include="Icons\delete.ico" />
     <Content Include="Icons\exit.ico" />
+    <Content Include="Icons\paste.ico" />
     <Content Include="Icons\undo.ico" />
     <Content Include="Icons\wrench.ico" />
     <Content Include="images\Banks\AbBank.png" />
