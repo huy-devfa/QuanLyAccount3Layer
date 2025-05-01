@@ -65,7 +65,7 @@
             this.mnuAdmin.Location = new System.Drawing.Point(0, 0);
             this.mnuAdmin.Name = "mnuAdmin";
             this.mnuAdmin.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuAdmin.Size = new System.Drawing.Size(621, 24);
+            this.mnuAdmin.Size = new System.Drawing.Size(410, 24);
             this.mnuAdmin.TabIndex = 0;
             this.mnuAdmin.Text = "menuStrip1";
             // 
@@ -169,9 +169,9 @@
             this.grBoxTongKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grBoxTongKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.grBoxTongKhachHang.Location = new System.Drawing.Point(16, 93);
-            this.grBoxTongKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grBoxTongKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongKhachHang.Name = "grBoxTongKhachHang";
-            this.grBoxTongKhachHang.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grBoxTongKhachHang.Padding = new System.Windows.Forms.Padding(2);
             this.grBoxTongKhachHang.Size = new System.Drawing.Size(176, 116);
             this.grBoxTongKhachHang.TabIndex = 1;
             this.grBoxTongKhachHang.TabStop = false;
@@ -181,7 +181,7 @@
             // 
             this.lblTongKhachHang.AutoSize = true;
             this.lblTongKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongKhachHang.ForeColor = System.Drawing.Color.White;
+            this.lblTongKhachHang.ForeColor = System.Drawing.Color.Black;
             this.lblTongKhachHang.Location = new System.Drawing.Point(132, 71);
             this.lblTongKhachHang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongKhachHang.Name = "lblTongKhachHang";
@@ -196,9 +196,9 @@
             this.grBoxTongTaiKhoanDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grBoxTongTaiKhoanDaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.grBoxTongTaiKhoanDaBan.Location = new System.Drawing.Point(220, 93);
-            this.grBoxTongTaiKhoanDaBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grBoxTongTaiKhoanDaBan.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongTaiKhoanDaBan.Name = "grBoxTongTaiKhoanDaBan";
-            this.grBoxTongTaiKhoanDaBan.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grBoxTongTaiKhoanDaBan.Padding = new System.Windows.Forms.Padding(2);
             this.grBoxTongTaiKhoanDaBan.Size = new System.Drawing.Size(176, 116);
             this.grBoxTongTaiKhoanDaBan.TabIndex = 1;
             this.grBoxTongTaiKhoanDaBan.TabStop = false;
@@ -208,7 +208,7 @@
             // 
             this.lblTongTaiKhoanDaBan.AutoSize = true;
             this.lblTongTaiKhoanDaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTaiKhoanDaBan.ForeColor = System.Drawing.Color.White;
+            this.lblTongTaiKhoanDaBan.ForeColor = System.Drawing.Color.Black;
             this.lblTongTaiKhoanDaBan.Location = new System.Drawing.Point(136, 71);
             this.lblTongTaiKhoanDaBan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongTaiKhoanDaBan.Name = "lblTongTaiKhoanDaBan";
@@ -222,11 +222,11 @@
             this.grBoxTongDoanhThu.Controls.Add(this.lblTongDoanhThu);
             this.grBoxTongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grBoxTongDoanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grBoxTongDoanhThu.Location = new System.Drawing.Point(424, 93);
-            this.grBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grBoxTongDoanhThu.Location = new System.Drawing.Point(16, 230);
+            this.grBoxTongDoanhThu.Margin = new System.Windows.Forms.Padding(2);
             this.grBoxTongDoanhThu.Name = "grBoxTongDoanhThu";
-            this.grBoxTongDoanhThu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grBoxTongDoanhThu.Size = new System.Drawing.Size(176, 116);
+            this.grBoxTongDoanhThu.Padding = new System.Windows.Forms.Padding(2);
+            this.grBoxTongDoanhThu.Size = new System.Drawing.Size(380, 116);
             this.grBoxTongDoanhThu.TabIndex = 1;
             this.grBoxTongDoanhThu.TabStop = false;
             this.grBoxTongDoanhThu.Text = "Tổng doanh thu";
@@ -235,8 +235,8 @@
             // 
             this.lblTongDoanhThu.AutoSize = true;
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(138, 71);
+            this.lblTongDoanhThu.ForeColor = System.Drawing.Color.Black;
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(4, 71);
             this.lblTongDoanhThu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
             this.lblTongDoanhThu.Size = new System.Drawing.Size(26, 29);
@@ -259,19 +259,20 @@
             // 
             this.btnTaiLai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnTaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiLai.Location = new System.Drawing.Point(514, 236);
-            this.btnTaiLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiLai.Location = new System.Drawing.Point(310, 37);
+            this.btnTaiLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiLai.Name = "btnTaiLai";
             this.btnTaiLai.Size = new System.Drawing.Size(86, 46);
             this.btnTaiLai.TabIndex = 3;
             this.btnTaiLai.Text = "Tải lại ";
             this.btnTaiLai.UseVisualStyleBackColor = false;
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // frmAdmin_Thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 309);
+            this.ClientSize = new System.Drawing.Size(410, 357);
             this.Controls.Add(this.btnTaiLai);
             this.Controls.Add(this.lblXinChaoUser);
             this.Controls.Add(this.grBoxTongDoanhThu);
@@ -279,7 +280,7 @@
             this.Controls.Add(this.grBoxTongKhachHang);
             this.Controls.Add(this.mnuAdmin);
             this.MainMenuStrip = this.mnuAdmin;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdmin_Thongke";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.frmAdmin_Thongke_Load);

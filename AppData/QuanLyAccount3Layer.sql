@@ -30,6 +30,8 @@ create table Accounts(
 	ThoiGianBan DateTime
 )
 
+select * from Accounts
+
 alter table accounts add cookieAccount char(7000)
 ALTER TABLE Accounts ALTER COLUMN LoaiAccount INT;
 
@@ -46,10 +48,26 @@ alter table accounts add BaoHanh char(10)
 
 alter table accounts add NgayHetBaoHanh datetime
 
+set dateformat dmy
+insert into Accounts values(1,1,'hello','123',30000,N'Còn Hàng','admin',null,'01/05/2025','10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(2,1,'hello1','1234',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(3,1,'hello2','1253',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(4,1,'hello3','1236',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(5,1,'hello4','1f23',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(6,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(7,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(8,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+insert into Accounts values(9,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+
+
 CREATE TABLE LoaiTaiKhoan (
     IdLoaiTaiKhoan INT PRIMARY KEY IDENTITY(1,1),  
     TenLoaiTaiKhoan NVARCHAR(100) NOT NULL UNIQUE
 );
+
+Insert into LoaiTaiKhoan(TenLoaiTaiKhoan) values('God CDK SG')
+select * from LoaiTaiKhoan
+
 
 create table LichSuNapTien(
 	IdNaptien int not null primary key,

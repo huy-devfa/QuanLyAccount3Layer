@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using QuanLyAccount3Layer.DAL;
 using System.Diagnostics.Eventing.Reader;
+using System.Configuration;
 
 namespace QuanLyAccount3Layer.BLL
 {
@@ -53,6 +54,37 @@ namespace QuanLyAccount3Layer.BLL
             return kqsql;
         }//ket thuc CheckUser
 
+        public int Count_User()
+        {
+            providers.Connect();
+            string query = "Select count(*) from Users where vaitro='User'";
+
+            SqlCommand cmd = new SqlCommand(query, Connection());
+
+            return (int)cmd.ExecuteScalar();
+        }
+
+        public int Count_SoldAccount()
+        {
+            providers.Connect();
+
+            string query = "Select count(*) from Accounts where trangthai=N'Đã bán'";
+
+            SqlCommand cmd = new SqlCommand(query, Connection());
+
+            return (int)cmd.ExecuteScalar();
+        }
+
+        public Decimal Sum_Revenue()
+        {
+            providers.Connect();
+
+            string query = "Select sum(GiaBan) from Accounts where trangthai=N'Đã bán'";
+
+            SqlCommand cmd = new SqlCommand(query, Connection());
+
+            return Convert.ToDecimal(cmd.ExecuteScalar());
+        }
         public int UserExecuteNonQuery(string queryOrSpName, string[] Parameters, object[] Values, bool isStored)
         {
             return providers.ExecuteNonQuery(queryOrSpName, Parameters, Values, isStored);
