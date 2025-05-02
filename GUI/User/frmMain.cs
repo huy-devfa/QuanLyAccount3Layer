@@ -75,5 +75,10 @@ namespace QuanLyAccount3Layer
             frmLogin LogOut = new frmLogin(Current_User);
             LogOut.Show();
         }//ket thuc mnuTaiKhoan_DangXuat_Click()
+
+        private void btnMuaAcc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
