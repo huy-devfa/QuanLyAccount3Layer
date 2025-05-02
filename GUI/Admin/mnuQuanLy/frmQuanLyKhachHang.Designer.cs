@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyKhachHang));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -115,7 +116,7 @@
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(69, 92);
-            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.ReadOnly = true;
             this.txtTaiKhoan.Size = new System.Drawing.Size(206, 24);
@@ -264,9 +265,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Navy;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLyKhachHang";
-            this.Text = "frmQuanLyKhachHang";
+            this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.frmQuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).EndInit();
             this.groupBox1.ResumeLayout(false);

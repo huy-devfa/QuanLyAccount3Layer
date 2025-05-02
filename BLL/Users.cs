@@ -104,6 +104,17 @@ namespace QuanLyAccount3Layer.BLL
             return Convert.ToDecimal(cmd.ExecuteScalar());
         }//ket thuc Sum_TotalUserBalance()
 
+        public decimal GetBalanceUser(string User)
+        {
+            providers.Connect();
+
+            string query = $"Select sodu from Users where username='{User}'";
+
+            SqlCommand cmd = new SqlCommand(query, Connection());
+
+            return Convert.ToDecimal(cmd.ExecuteScalar());
+        }//ket thuc GetBalanceUser()
+
         public int UserExecuteNonQuery(string queryOrSpName, string[] Parameters, object[] Values, bool isStored)
         {
             return providers.ExecuteNonQuery(queryOrSpName, Parameters, Values, isStored);

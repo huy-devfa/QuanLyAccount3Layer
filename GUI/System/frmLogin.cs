@@ -18,6 +18,11 @@ namespace QuanLyAccount3Layer.GUI
             InitializeComponent();
         }
 
+        public frmLogin(string UserLogOut)
+        {
+            InitializeComponent();
+            txtTaikhoan.Text = UserLogOut; 
+        }
         private void WebLogin_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             

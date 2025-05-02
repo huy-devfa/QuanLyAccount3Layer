@@ -32,7 +32,7 @@ end
 
 
 create table Accounts(
-	idTaiKhoan int not null primary key,
+	idTaiKhoan int IDENTITY(1,1) primary key not null,
 	LoaiAccount int,
 	userAccount char(100),
 	passAccount char(500),
@@ -42,6 +42,7 @@ create table Accounts(
 	NguoiMua char(16),
 	ThoiGianBan DateTime
 )
+
 
 select * from Accounts
 
@@ -62,15 +63,7 @@ alter table accounts add BaoHanh char(10)
 alter table accounts add NgayHetBaoHanh datetime
 
 set dateformat dmy
-insert into Accounts values(1,1,'hello','123',30000,N'Còn Hàng','admin',null,'01/05/2025','10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(2,1,'hello1','1234',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(3,1,'hello2','1253',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(4,1,'hello3','1236',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(5,1,'hello4','1f23',30000,N'Còn Hàng','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(6,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(7,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(8,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
-insert into Accounts values(9,1,'hello4','1f23',30000,N'Đã bán','admin',null,null,'10 ngay','11/05/2025','abcdxyz')
+
 
 
 CREATE TABLE LoaiTaiKhoan (
@@ -83,24 +76,27 @@ select * from LoaiTaiKhoan
 
 
 create table LichSuNapTien(
-	IdNaptien int not null primary key,
+	IdNapTien int identity(1,1) not null primary key,
 	TaiKhoanNapTien char(16),
 	SoTienNap Decimal(18,2),
 	NoiDungNapTien char(255),
-	ThoiGianNap Datetime
+	ThoiGianNap Datetime,
+	stk char(100)
 )
 
- alter table LichSuNapTien add CONSTRAINT FK_NapTien_User FOREIGN KEY (TaiKhoanNapTien) REFERENCES Users(username)
+alter table LichSuNapTien add constraint fk1_Stk foreign key (stk) references ThongTinThanhToan(stk)
+alter table LichSuNapTien add CONSTRAINT FK_NapTien_User FOREIGN KEY (TaiKhoanNapTien) REFERENCES Users(username)
 
 ALTER TABLE LichSuNapTien ADD CONSTRAINT chk_SoTienNap CHECK (SoTienNap > 0);
 
 
 create table DonHang(
-	IdDonHang int not null primary key,
+	IdDonHang int IDENTITY(1,1) not null primary key,
 	NguoiMuaHang char(16),
 	TongTienDon Decimal(18,2),
 	ThoiGianTaoDon datetime
 )
+
 
 ALTER TABLE DonHang ADD CONSTRAINT FK_DonHang_User FOREIGN KEY (NguoiMuaHang) REFERENCES Users(username);
 
@@ -118,16 +114,18 @@ create table Chitietdonhang(
 )
 
 alter table Chitietdonhang add CONSTRAINT FK_ChitietDonHang_DonHang FOREIGN KEY (IdDonHang) REFERENCES DonHang(IdDonHang)
+
 alter table chitietdonhang add CONSTRAINT FK_ChitietDonHang_Account FOREIGN KEY (IdTaiKhoan) REFERENCES Accounts(idTaiKhoan)
 
 create table LichSuGiaoDich (
-    idGiaoDich int not null primary key,
+    idGiaoDich int IDENTITY(1,1) not null primary key,
     UserId char(16) not null,
     LoaiGiaoDich nvarchar(50),
     sotiengiaodich decimal(18,2),
     Motagiaodich nvarchar(255),
     ThoiGianGiaoDich datetime default GETDATE(),
 )
+
 ALTER TABLE LichSuGiaoDich ADD CONSTRAINT chk_GiaoDichSoTien CHECK (sotiengiaodich <> 0);
 
 alter table LichSuGiaoDich add CONSTRAINT FK_TransactionUser FOREIGN KEY (UserID) REFERENCES Users(username)

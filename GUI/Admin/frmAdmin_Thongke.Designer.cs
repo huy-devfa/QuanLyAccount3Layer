@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mnuAdmin = new System.Windows.Forms.MenuStrip();
             this.mnuAdmin_HeThong = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAdmin_HeThong_ThongKe = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,14 +50,17 @@
             this.grBoxTongDoanhThu = new System.Windows.Forms.GroupBox();
             this.lblTongDoanhThu = new System.Windows.Forms.Label();
             this.lblXinChaoUser = new System.Windows.Forms.Label();
-            this.btnTaiLai = new System.Windows.Forms.Button();
             this.grBoxTongTienConLaiCuaKhachHang = new System.Windows.Forms.GroupBox();
             this.lblTongTienConLaiCuaKhachHang = new System.Windows.Forms.Label();
+            this.timerLoad = new System.Windows.Forms.Timer(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusLoad = new System.Windows.Forms.ToolStripStatusLabel();
             this.mnuAdmin.SuspendLayout();
             this.grBoxTongKhachHang.SuspendLayout();
             this.grBoxTongTaiKhoanDaBan.SuspendLayout();
             this.grBoxTongDoanhThu.SuspendLayout();
             this.grBoxTongTienConLaiCuaKhachHang.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuAdmin
@@ -71,6 +75,7 @@
             this.mnuAdmin.Size = new System.Drawing.Size(879, 24);
             this.mnuAdmin.TabIndex = 0;
             this.mnuAdmin.Text = "menuStrip1";
+            this.mnuAdmin.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuAdmin_ItemClicked);
             // 
             // mnuAdmin_HeThong
             // 
@@ -259,19 +264,6 @@
             this.lblXinChaoUser.TabIndex = 2;
             this.lblXinChaoUser.Text = "Xin chào, User!";
             // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnTaiLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiLai.Location = new System.Drawing.Point(641, 350);
-            this.btnTaiLai.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(176, 46);
-            this.btnTaiLai.TabIndex = 3;
-            this.btnTaiLai.Text = "Tải lại ";
-            this.btnTaiLai.UseVisualStyleBackColor = false;
-            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
-            // 
             // grBoxTongTienConLaiCuaKhachHang
             // 
             this.grBoxTongTienConLaiCuaKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -299,12 +291,34 @@
             this.lblTongTienConLaiCuaKhachHang.TabIndex = 0;
             this.lblTongTienConLaiCuaKhachHang.Text = "0";
             // 
+            // timerLoad
+            // 
+            this.timerLoad.Enabled = true;
+            this.timerLoad.Interval = 11000;
+            this.timerLoad.Tick += new System.EventHandler(this.timerLoad_Tick);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLoad});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(879, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusLoad
+            // 
+            this.statusLoad.Name = "statusLoad";
+            this.statusLoad.Size = new System.Drawing.Size(104, 17);
+            this.statusLoad.Text = "Tải lại sau : 10 giây";
+            // 
             // frmAdmin_Thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 406);
-            this.Controls.Add(this.btnTaiLai);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblXinChaoUser);
             this.Controls.Add(this.grBoxTongTienConLaiCuaKhachHang);
             this.Controls.Add(this.grBoxTongDoanhThu);
@@ -328,6 +342,8 @@
             this.grBoxTongDoanhThu.PerformLayout();
             this.grBoxTongTienConLaiCuaKhachHang.ResumeLayout(false);
             this.grBoxTongTienConLaiCuaKhachHang.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,11 +369,13 @@
         private System.Windows.Forms.Label lblTongKhachHang;
         private System.Windows.Forms.Label lblTongTaiKhoanDaBan;
         private System.Windows.Forms.Label lblTongDoanhThu;
-        private System.Windows.Forms.Button btnTaiLai;
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_HeThong_Thoat;
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_QuanLy_QuanLyTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem mnuAdmin_QuanLy_QuanLyKhachHang;
         private System.Windows.Forms.GroupBox grBoxTongTienConLaiCuaKhachHang;
         private System.Windows.Forms.Label lblTongTienConLaiCuaKhachHang;
+        private System.Windows.Forms.Timer timerLoad;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel statusLoad;
     }
 }

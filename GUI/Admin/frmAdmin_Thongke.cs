@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using QuanLyAccount3Layer.DAL;
 using QuanLyAccount3Layer.GUI.Admin.mnuQuanLy;
+using System.Threading;
 
 namespace QuanLyAccount3Layer.GUI
 {
@@ -56,6 +57,7 @@ namespace QuanLyAccount3Layer.GUI
         private void frmAdmin_Thongke_Load(object sender, EventArgs e)
         {
             LoadAdmin();
+            statusLoadThongKe();
             lblXinChaoUser.Text = $"Xin chào, {Current_User} !" ;
         }
 
@@ -68,6 +70,26 @@ namespace QuanLyAccount3Layer.GUI
         {
             frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
             qlkh.Show();
+        }
+
+        private void mnuAdmin_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private async void statusLoadThongKe()
+        {
+            for (int i = 10; i >= 0; i--)
+            {
+                statusLoad.Text = $"Tải lại sau : {i} giây";
+                await Task.Delay(1000);
+            }
+        }
+
+        private void timerLoad_Tick(object sender, EventArgs e)
+        {
+            LoadAdmin();
+            statusLoadThongKe();
         }
     }
 }
