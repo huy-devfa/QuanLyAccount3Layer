@@ -40,9 +40,15 @@ create table Accounts(
 	TrangThai nvarchar(30),
 	NguoiDangBan char(16),
 	NguoiMua char(16),
-	ThoiGianBan DateTime
+	ThoiGianBan DateTime,
+	cookieAccount char(7000),
+	BaoHanh char(10),
+	NgayHetBaoHanh datetime
 )
 
+
+insert into Accounts (LoaiAccount,userAccount,passAccount,GiaBan,TrangThai,NguoiDangBan,NguoiMua,ThoiGianBan)
+values(1,'test1','test2',30000,N'Đã bán','shoptudoi','admin',GETDATE())
 
 select * from Accounts
 

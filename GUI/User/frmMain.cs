@@ -53,7 +53,7 @@ namespace QuanLyAccount3Layer
             {
                 MessageBox.Show("Da co loi khi thuc hien GetBalanceUser tu co so du lieu!", "Thong bao!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            mnuTaiKhoan.Text = Current_User;
+            mnuTaiKhoan.Text = Current_User + " ▼";
         }//ket thuc LoadSoDu()
 
         private void mnuTaiKhoan_QuanTri_Click(object sender, EventArgs e)
@@ -79,6 +79,31 @@ namespace QuanLyAccount3Layer
         private void btnMuaAcc_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EnterNutMua()
+        {
+            btnMuaAcc.BackColor = Color.White;
+            btnMuaAcc.ForeColor = Color.Black;
+        }
+        private void btnMuaAcc_MouseHover(object sender, EventArgs e)
+        {
+            EnterNutMua();
+        }
+
+        private void btnMuaAcc_MouseEnter(object sender, EventArgs e)
+        {
+            EnterNutMua();
+        }
+
+        private void LeaveNutMua()
+        {
+            btnMuaAcc.BackColor = Color.RoyalBlue;
+            btnMuaAcc.ForeColor = Color.White;
+        }
+        private void btnMuaAcc_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveNutMua();
         }
     }
 }
