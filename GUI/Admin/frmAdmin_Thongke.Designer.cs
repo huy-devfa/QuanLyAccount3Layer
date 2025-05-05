@@ -55,12 +55,18 @@
             this.timerLoad = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLoad = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dgvGiaoDichGanDay = new System.Windows.Forms.DataGridView();
+            this.grboxGiaoDichGanDay = new System.Windows.Forms.GroupBox();
+            this.txtTimUser = new System.Windows.Forms.TextBox();
+            this.btnTimUser = new System.Windows.Forms.Button();
             this.mnuAdmin.SuspendLayout();
             this.grBoxTongKhachHang.SuspendLayout();
             this.grBoxTongTaiKhoanDaBan.SuspendLayout();
             this.grBoxTongDoanhThu.SuspendLayout();
             this.grBoxTongTienConLaiCuaKhachHang.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichGanDay)).BeginInit();
+            this.grboxGiaoDichGanDay.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuAdmin
@@ -301,7 +307,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLoad});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 731);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(879, 22);
             this.statusStrip1.TabIndex = 3;
@@ -313,11 +319,55 @@
             this.statusLoad.Size = new System.Drawing.Size(104, 17);
             this.statusLoad.Text = "Tải lại sau : 10 giây";
             // 
+            // dgvGiaoDichGanDay
+            // 
+            this.dgvGiaoDichGanDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGiaoDichGanDay.Location = new System.Drawing.Point(15, 78);
+            this.dgvGiaoDichGanDay.Name = "dgvGiaoDichGanDay";
+            this.dgvGiaoDichGanDay.RowHeadersVisible = false;
+            this.dgvGiaoDichGanDay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvGiaoDichGanDay.Size = new System.Drawing.Size(817, 271);
+            this.dgvGiaoDichGanDay.TabIndex = 4;
+            // 
+            // grboxGiaoDichGanDay
+            // 
+            this.grboxGiaoDichGanDay.Controls.Add(this.btnTimUser);
+            this.grboxGiaoDichGanDay.Controls.Add(this.dgvGiaoDichGanDay);
+            this.grboxGiaoDichGanDay.Controls.Add(this.txtTimUser);
+            this.grboxGiaoDichGanDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grboxGiaoDichGanDay.Location = new System.Drawing.Point(19, 365);
+            this.grboxGiaoDichGanDay.Name = "grboxGiaoDichGanDay";
+            this.grboxGiaoDichGanDay.Size = new System.Drawing.Size(847, 355);
+            this.grboxGiaoDichGanDay.TabIndex = 5;
+            this.grboxGiaoDichGanDay.TabStop = false;
+            this.grboxGiaoDichGanDay.Text = "Giao dịch gần đây";
+            // 
+            // txtTimUser
+            // 
+            this.txtTimUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimUser.Location = new System.Drawing.Point(588, 32);
+            this.txtTimUser.Name = "txtTimUser";
+            this.txtTimUser.Size = new System.Drawing.Size(196, 29);
+            this.txtTimUser.TabIndex = 17;
+            this.txtTimUser.Text = "Nhập tên cần tìm..";
+            this.txtTimUser.TextChanged += new System.EventHandler(this.txtTimUser_TextChanged);
+            // 
+            // btnTimUser
+            // 
+            this.btnTimUser.Image = global::QuanLyAccount3Layer.Properties.Resources.find;
+            this.btnTimUser.Location = new System.Drawing.Point(790, 23);
+            this.btnTimUser.Name = "btnTimUser";
+            this.btnTimUser.Size = new System.Drawing.Size(48, 44);
+            this.btnTimUser.TabIndex = 18;
+            this.btnTimUser.UseVisualStyleBackColor = true;
+            this.btnTimUser.Click += new System.EventHandler(this.btnTimUser_Click);
+            // 
             // frmAdmin_Thongke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 406);
+            this.ClientSize = new System.Drawing.Size(879, 753);
+            this.Controls.Add(this.grboxGiaoDichGanDay);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lblXinChaoUser);
             this.Controls.Add(this.grBoxTongTienConLaiCuaKhachHang);
@@ -344,6 +394,9 @@
             this.grBoxTongTienConLaiCuaKhachHang.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoDichGanDay)).EndInit();
+            this.grboxGiaoDichGanDay.ResumeLayout(false);
+            this.grboxGiaoDichGanDay.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +430,9 @@
         private System.Windows.Forms.Timer timerLoad;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusLoad;
+        private System.Windows.Forms.DataGridView dgvGiaoDichGanDay;
+        private System.Windows.Forms.GroupBox grboxGiaoDichGanDay;
+        private System.Windows.Forms.Button btnTimUser;
+        private System.Windows.Forms.TextBox txtTimUser;
     }
 }

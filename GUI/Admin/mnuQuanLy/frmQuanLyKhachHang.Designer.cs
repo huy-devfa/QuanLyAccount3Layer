@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLyKhachHang));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +51,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTimUser = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -163,11 +168,34 @@
             // 
             // dgvQuanLyKhachHang
             // 
+            this.dgvQuanLyKhachHang.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuanLyKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQuanLyKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuanLyKhachHang.Location = new System.Drawing.Point(12, 352);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuanLyKhachHang.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvQuanLyKhachHang.EnableHeadersVisualStyles = false;
+            this.dgvQuanLyKhachHang.GridColor = System.Drawing.Color.Blue;
+            this.dgvQuanLyKhachHang.Location = new System.Drawing.Point(12, 386);
             this.dgvQuanLyKhachHang.Name = "dgvQuanLyKhachHang";
+            this.dgvQuanLyKhachHang.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvQuanLyKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQuanLyKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuanLyKhachHang.Size = new System.Drawing.Size(679, 256);
+            this.dgvQuanLyKhachHang.Size = new System.Drawing.Size(679, 222);
             this.dgvQuanLyKhachHang.TabIndex = 8;
             // 
             // btnSua
@@ -240,11 +268,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lưu ý:";
             // 
+            // txtTimUser
+            // 
+            this.txtTimUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimUser.Location = new System.Drawing.Point(429, 342);
+            this.txtTimUser.Name = "txtTimUser";
+            this.txtTimUser.Size = new System.Drawing.Size(196, 29);
+            this.txtTimUser.TabIndex = 15;
+            this.txtTimUser.Text = "Nhập tên cần tìm..";
+            this.txtTimUser.TextChanged += new System.EventHandler(this.txtTimUser_TextChanged);
+            // 
+            // btnTim
+            // 
+            this.btnTim.Image = global::QuanLyAccount3Layer.Properties.Resources.find;
+            this.btnTim.Location = new System.Drawing.Point(631, 333);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(48, 44);
+            this.btnTim.TabIndex = 16;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
             // frmQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 623);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.txtTimUser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLuu);
@@ -298,5 +348,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtTimUser;
+        private System.Windows.Forms.Button btnTim;
     }
 }

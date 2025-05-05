@@ -2,17 +2,15 @@
 
 create table Users(
 	username char(16) not null primary key,
-	pass char(100)
+	pass char(100),
+	SoDu int,
+	vaitro char(50),
+	ThoiGianTao datetime
 )
 
 
-alter table Users add SoDu int
-
 alter table Users add constraint ck1_sodu check (sodu>=0)
-
-
-
-alter table Users add vaitro char(50)
+alter table Users add constraint df1_ThoiGianTao default(Getdate()) for ThoiGianTao
 
 alter table Users add constraint default1_sodu default 0 for sodu
 alter table Users add constraint default_ default'User' for vaitro
@@ -43,15 +41,24 @@ create table Accounts(
 	ThoiGianBan DateTime,
 	cookieAccount char(7000),
 	BaoHanh char(10),
-	NgayHetBaoHanh datetime
+	NgayHetBaoHanh datetime,
+	IDdonHang int
 )
+
 
 
 insert into Accounts (LoaiAccount,userAccount,passAccount,GiaBan,TrangThai,NguoiDangBan,NguoiMua,ThoiGianBan)
 values(1,'test1','test2',30000,N'Đã bán','shoptudoi','admin',GETDATE())
+insert into Accounts (LoaiAccount,userAccount,passAccount,GiaBan,TrangThai,NguoiDangBan,NguoiMua,ThoiGianBan,BaoHanh,NgayHetBaoHanh,cookieAccount)
+values(1,'test1','test2',30000,N'Đã bán','shoptudoi','admin',GETDATE(),'10 days',dateadd(day,10,Getdate()),'cookie' )
+
+
 
 select * from Accounts
 
+alter table Accounts add constraint fk1_IdDonHang foreign key (IdDonHang) references DonHang(IdDonHang)
+
+alter table Accounts add constraint unq_userAccount unique(userAccount)
 alter table accounts add cookieAccount char(7000)
 ALTER TABLE Accounts ALTER COLUMN LoaiAccount INT;
 
@@ -103,6 +110,8 @@ create table DonHang(
 	ThoiGianTaoDon datetime
 )
 
+select * from DonHang
+insert into DonHang(NguoiMuaHang,TongTienDon,ThoiGianTaoDon) values('shoptudoi',30000,GetDate())
 
 ALTER TABLE DonHang ADD CONSTRAINT FK_DonHang_User FOREIGN KEY (NguoiMuaHang) REFERENCES Users(username);
 
@@ -116,10 +125,13 @@ create table Chitietdonhang(
 	IdDonHang int not null,                    
 	IdTaiKhoan int not null,                    
 	GiaMua Decimal(18,2),          
-	Soluongmua int          
+	Soluongmua int,
+	IdLoaiTaiKhoan int
 )
 
+
 alter table Chitietdonhang add CONSTRAINT FK_ChitietDonHang_DonHang FOREIGN KEY (IdDonHang) REFERENCES DonHang(IdDonHang)
+alter table ChiTietDonHang add constraint fk1_IdLoaiTaiKhoan foreign key (IdLoaiTaiKhoan) references LoaiTaiKhoan(IdLoaiTaiKhoan)
 
 alter table chitietdonhang add CONSTRAINT FK_ChitietDonHang_Account FOREIGN KEY (IdTaiKhoan) REFERENCES Accounts(idTaiKhoan)
 
@@ -132,11 +144,22 @@ create table LichSuGiaoDich (
     ThoiGianGiaoDich datetime default GETDATE(),
 )
 
+select * from LichSuGiaoDich
+Select * from LichSuGiaoDich where UserId like 'admin'
 ALTER TABLE LichSuGiaoDich ADD CONSTRAINT chk_GiaoDichSoTien CHECK (sotiengiaodich <> 0);
 
 alter table LichSuGiaoDich add CONSTRAINT FK_TransactionUser FOREIGN KEY (UserID) REFERENCES Users(username)
 
-
+--procedure InsertLichSuGiaoDich
+create proc Usp_InsertLichSuGiaoDich
+	@PUserid char(16),
+	@PLoaiGiaoDich nvarchar(50),
+	@PSoTienGiaoDich decimal(18,2),
+	@PMotaGiaoDich nvarchar(255)
+as
+begin
+	Insert into LichSuGiaoDich(UserId,LoaiGiaoDich,sotiengiaodich,MoTaGiaoDich) values (@PUserid,@PLoaiGiaoDich,@Psotiengiaodich,@PMoTaGiaoDich)
+end
 
 Create table ThongTinThanhToan(
 	STK char(100) not null primary key,

@@ -19,6 +19,15 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
             InitializeComponent();
         }
 
+        string Current_User = "";
+        public frmQuanLyKhachHang(string User)
+        {
+            InitializeComponent();
+            Current_User = User;
+        }
+
+        
+
         Users user;
 
         private void TrangThaiNutLenh(string TenNut)
@@ -96,11 +105,13 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
             dgvQuanLyKhachHang.Columns["username"].HeaderText = "Tài khoản";
             dgvQuanLyKhachHang.Columns["username"].Width = 100;
             dgvQuanLyKhachHang.Columns["pass"].HeaderText = "Mật khẩu";
-            dgvQuanLyKhachHang.Columns["pass"].Width = 200;
+            dgvQuanLyKhachHang.Columns["pass"].Width = 160;
             dgvQuanLyKhachHang.Columns["SoDu"].HeaderText = "Số dư";
             dgvQuanLyKhachHang.Columns["SoDu"].Width = 100;
             dgvQuanLyKhachHang.Columns["vaitro"].HeaderText = "Vai trò";
-            dgvQuanLyKhachHang.Columns["vaitro"].Width = 250;
+            dgvQuanLyKhachHang.Columns["vaitro"].Width = 150;
+            dgvQuanLyKhachHang.Columns["ThoiGianTao"].HeaderText = "Thời gian tạo";
+            dgvQuanLyKhachHang.Columns["ThoiGianTao"].Width = 150;
 
             BindingDataUser();
         }//ket thuc LoadDataUser()
@@ -124,9 +135,11 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
             return user.UserExecuteNonQuery(spName, parameters, values, true);
         }//ket thuc UpdateUser()
 
+        string SoTienBanDau = "";
         private void btnSua_Click(object sender, EventArgs e)
         {
             TrangThaiNutLenh("Sửa");
+            SoTienBanDau = txtSoDu.Text;
         }//ket thuc btnSua_Click()
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -134,14 +147,41 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
             TrangThaiNutLenh("Hủy");
         }//ket thuc btnHuy_Click()
 
+        private void LuuThongTinNguoiThucHienCongTruTien(Users user)
+        {
+            string spName = "Usp_InsertLichSuGiaoDich";
+
+            string[] parameters = { "@PUserid", "@PLoaiGiaoDich", "@Psotiengiaodich", "@PMoTaGiaoDich" };
+
+            string loaigiaodich = "";
+            int sotiendau = Convert.ToInt32(SoTienBanDau);
+            int sotiensau = Convert.ToInt32(txtSoDu.Text);
+            int sotiengiaodich = 0;
+            if (sotiendau > sotiensau)
+            {
+                loaigiaodich = "Trừ tiền";
+                sotiengiaodich = sotiendau - sotiensau;
+            }
+            else
+            {
+                loaigiaodich = "Cộng tiền";
+                sotiengiaodich = sotiensau - sotiendau;
+            }
+
+            object[] values = { txtTaiKhoan.Text, loaigiaodich, sotiengiaodich, $" admin({Current_User}) {loaigiaodich}" };
+
+            user.UserExecuteNonQuery(spName, parameters, values, true);
+        }//ket thuc LuuThongTinNguoiThucHienCongTruTien()
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            Users user = new Users();
+            user = new Users();
             if (user.Connect())
             {
                 int rec = UpdateUser(user);
                 if(rec > 0)
                 {
+                    LuuThongTinNguoiThucHienCongTruTien(user);
                     MessageBox.Show("Sua thong tin thanh cong!", "Thong bao!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -157,5 +197,51 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
         {
             txtVaiTro.Text = cmbChonVaiTro.Text;
         }//ket thuc cmbChonVaiTro_SelectedIndexChanged()
+
+        private void FindUserByUsername()
+        {
+            DataTable tblUser;
+
+            user = new Users();
+
+            if (user.Connect())
+            {
+                tblUser = user.FindUserByName(txtTimUser.Text);
+                dgvQuanLyKhachHang.DataSource = tblUser;
+            }
+            else
+            {
+                MessageBox.Show("Ket noi voi co so du lieu that bai!","Thong bao!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            dgvQuanLyKhachHang.Columns["username"].HeaderText = "Tài khoản";
+            dgvQuanLyKhachHang.Columns["username"].Width = 100;
+            dgvQuanLyKhachHang.Columns["pass"].HeaderText = "Mật khẩu";
+            dgvQuanLyKhachHang.Columns["pass"].Width = 160;
+            dgvQuanLyKhachHang.Columns["SoDu"].HeaderText = "Số dư";
+            dgvQuanLyKhachHang.Columns["SoDu"].Width = 100;
+            dgvQuanLyKhachHang.Columns["vaitro"].HeaderText = "Vai trò";
+            dgvQuanLyKhachHang.Columns["vaitro"].Width = 150;
+            dgvQuanLyKhachHang.Columns["ThoiGianTao"].HeaderText = "Thời gian tạo";
+            dgvQuanLyKhachHang.Columns["ThoiGianTao"].Width = 150;
+
+            BindingDataUser();
+        }//ket thuc FindUserByUsername()
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            FindUserByUsername();
+        }
+
+        private void txtTimUser_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimUser.Text.Equals(""))
+            {
+                LoadDataUser();
+            }
+            else
+            {
+                FindUserByUsername();
+            }
+        }
     }
 }

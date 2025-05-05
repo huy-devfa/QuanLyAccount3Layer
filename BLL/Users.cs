@@ -61,6 +61,18 @@ namespace QuanLyAccount3Layer.BLL
             string[] values = { };
             return providers.GetData("Select * from Users",parameters,values,false);
         }//ket thuc GetDataUser()
+
+        public DataTable FindUserByName(string User)
+        {
+            string query = $"Select * from Users where username Like '{User}' ";
+
+            string[] parameters = { };
+
+            object[] values = { };
+
+            return providers.GetData(query, parameters, values, false);
+        }//ket thuc FindUserByName()
+        
         public int Count_User()
         {
             providers.Connect();
