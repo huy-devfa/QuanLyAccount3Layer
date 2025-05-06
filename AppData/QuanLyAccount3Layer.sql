@@ -146,7 +146,7 @@ create table LichSuGiaoDich (
 
 select * from LichSuGiaoDich
 Select * from LichSuGiaoDich where UserId like 'admin'
-ALTER TABLE LichSuGiaoDich ADD CONSTRAINT chk_GiaoDichSoTien CHECK (sotiengiaodich <> 0);
+ALTER TABLE LichSuGiaoDich ADD CONSTRAINT chk_GiaoDichSoTien CHECK (sotiengiaodich >= 0);
 
 alter table LichSuGiaoDich add CONSTRAINT FK_TransactionUser FOREIGN KEY (UserID) REFERENCES Users(username)
 

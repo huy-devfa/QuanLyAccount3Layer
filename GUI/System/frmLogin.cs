@@ -81,7 +81,7 @@ namespace QuanLyAccount3Layer.GUI
                     string userLogin = txtTaikhoan.Text;
                     frmMain frm = new frmMain(1,userLogin);
                     frm.Show();
-                    this.Hide();
+                    //this.Hide();
                 }
                 else if(user.CheckUser(txtTaikhoan.Text,txtMatKhau.Text,"User") > 0)
                 {

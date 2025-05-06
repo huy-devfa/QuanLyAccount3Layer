@@ -181,7 +181,10 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
                 int rec = UpdateUser(user);
                 if(rec > 0)
                 {
-                    LuuThongTinNguoiThucHienCongTruTien(user);
+                    if(SoTienBanDau != txtSoDu.Text)
+                    {
+                        LuuThongTinNguoiThucHienCongTruTien(user);
+                    }
                     MessageBox.Show("Sua thong tin thanh cong!", "Thong bao!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
