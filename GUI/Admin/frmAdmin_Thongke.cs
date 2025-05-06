@@ -173,5 +173,10 @@ namespace QuanLyAccount3Layer.GUI
         {
             
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            txtTimUser.Text = "";
+        }
     }
 }

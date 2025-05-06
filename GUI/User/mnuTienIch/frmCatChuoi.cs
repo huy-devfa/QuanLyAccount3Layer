@@ -61,7 +61,7 @@ namespace QuanLyAccount3Layer.GUI.User.mnuTienIch
 
                     for (int i = 0; i < sodong; i++)
                     {
-                        string donghientai = rtxtNhapTaiKhoan.Lines[i];
+                        string donghientai = rtxtNhapTaiKhoan.Lines[i] + kytungancach;
 
                         for (int j = 0; j < donghientai.Length; j++)
                         {

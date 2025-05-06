@@ -246,5 +246,10 @@ namespace QuanLyAccount3Layer.GUI.Admin.mnuQuanLy
                 FindUserByUsername();
             }
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            txtTimUser.Clear();
+        }
     }
 }
