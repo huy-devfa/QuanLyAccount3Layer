@@ -98,7 +98,7 @@ namespace QuanLyAccount3Layer.GUI
                         if (rec > 0)
                         {
                             MessageBox.Show("Dang ki thanh cong");
-                            this.Hide();
+                            this.Close();
                         }
                         return;
                     }
@@ -113,11 +113,11 @@ namespace QuanLyAccount3Layer.GUI
 
         private void frmregister_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult ClosingForm = MessageBox.Show("Bạn có chắc muốn thoát khỏi chương trình không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (ClosingForm == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+            //DialogResult ClosingForm = MessageBox.Show("Bạn có chắc muốn thoát khỏi chương trình không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //if (ClosingForm == DialogResult.No)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void btnExit_Click(object sender, EventArgs e)

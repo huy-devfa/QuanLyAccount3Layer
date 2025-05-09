@@ -57,6 +57,12 @@
     <Compile Include="GUI\Admin\frmAdmin_Thongke.Designer.cs">
       <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin\mnuHeThong\frmMaUuDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\mnuHeThong\frmMaUuDai.Designer.cs">
+      <DependentUpon>frmMaUuDai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\mnuHeThong\frmThongTinThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="GUI\System\frmregister.Designer.cs">
       <DependentUpon>frmregister.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\User\mnuBienDongSoDu\frmLichSuBienDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\User\mnuBienDongSoDu\frmLichSuBienDong.Designer.cs">
+      <DependentUpon>frmLichSuBienDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\User\mnuTienIch\frmCatChuoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,9 @@
     <EmbeddedResource Include="GUI\Admin\frmAdmin_Thongke.resx">
       <DependentUpon>frmAdmin_Thongke.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\mnuHeThong\frmMaUuDai.resx">
+      <DependentUpon>frmMaUuDai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\mnuHeThong\frmThongTinThanhToan.resx">
       <DependentUpon>frmThongTinThanhToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\System\frmregister.resx">
       <DependentUpon>frmregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\User\mnuBienDongSoDu\frmLichSuBienDong.resx">
+      <DependentUpon>frmLichSuBienDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\User\mnuTienIch\frmCatChuoi.resx">
       <DependentUpon>frmCatChuoi.cs</DependentUpon>

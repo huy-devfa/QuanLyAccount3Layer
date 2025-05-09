@@ -11,6 +11,7 @@ using QuanLyAccount3Layer.GUI;
 using QuanLyAccount3Layer.GUI.User.mnuTienIch;
 using System.Data.SqlClient;
 using QuanLyAccount3Layer.BLL;
+using QuanLyAccount3Layer.GUI.User.mnuBienDongSoDu;
 
 namespace QuanLyAccount3Layer
 {
@@ -39,6 +40,7 @@ namespace QuanLyAccount3Layer
         private void frmMain_Load(object sender, EventArgs e)
         {
             LoadSoDu();
+            LoadLaiMain();
         }
 
         private void LoadSoDu()
@@ -104,6 +106,27 @@ namespace QuanLyAccount3Layer
         private void btnMuaAcc_MouseLeave(object sender, EventArgs e)
         {
             LeaveNutMua();
+        }
+
+        private void mnuBienDongSoDu_LichSuBienDong_Click(object sender, EventArgs e)
+        {
+            frmLichSuBienDong lsbd = new frmLichSuBienDong(Current_User);
+            lsbd.Show();
+        }//ket thuc mnuBienDongSoDu_LichSuBienDong_Click()
+
+        private async void LoadLaiMain()
+        {
+            for (int i = 10; i >= 0; i--)
+            {
+                statusLoadLaiMain.Text = $"Load lại sau : {i} giây";
+                await Task.Delay(1000);
+            }
+        }//ket thuc LoadLaiMain()
+
+        private void TimerLoadLaiMain_Tick(object sender, EventArgs e)
+        {
+            LoadLaiMain();
+            LoadSoDu();
         }
     }
 }

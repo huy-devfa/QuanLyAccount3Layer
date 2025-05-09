@@ -17,6 +17,7 @@ alter table Users add constraint default_ default'User' for vaitro
 
 select * from Users
 
+
 --proceduce Update Users
 create proc Usp_UpdateUsers
 	@Pusername char(16),

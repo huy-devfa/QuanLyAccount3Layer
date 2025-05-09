@@ -36,6 +36,15 @@ namespace QuanLyAccount3Layer.BLL
             return providers.GetData("Select * from LichSuGiaoDich order by idGiaoDich DESC", parameters, values, false);
         }// ket thuc GetDataLichSuGiaoDich
 
+        public DataTable GetDataLichSuDongTien_User(string User)
+        {
+            string[] parameters = { "@Puser" };
+
+            object[] values = { User };
+
+            return providers.GetData("Select * from LichSuGiaoDich where UserId = @Puser order by idGiaoDich DESC", parameters, values, false);
+        }//ket thuc GetDataLichSuDongTien_User()
+
         public DataTable FindUserByName(string User)
         {
             string query = $"Select * from LichSuGiaoDich where UserId like '{User}' ";
