@@ -42,7 +42,6 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtVaiTro = new System.Windows.Forms.TextBox();
             this.txtSoDu = new System.Windows.Forms.TextBox();
-            this.cmbChonVaiTro = new System.Windows.Forms.ComboBox();
             this.dgvQuanLyKhachHang = new System.Windows.Forms.DataGridView();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.txtTimUser = new System.Windows.Forms.TextBox();
             this.btnTim = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
+            this.cmbChonVaiTro = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -154,18 +154,6 @@
             this.txtSoDu.ReadOnly = true;
             this.txtSoDu.Size = new System.Drawing.Size(206, 29);
             this.txtSoDu.TabIndex = 6;
-            // 
-            // cmbChonVaiTro
-            // 
-            this.cmbChonVaiTro.FormattingEnabled = true;
-            this.cmbChonVaiTro.Items.AddRange(new object[] {
-            "Administrator",
-            "User"});
-            this.cmbChonVaiTro.Location = new System.Drawing.Point(332, 147);
-            this.cmbChonVaiTro.Name = "cmbChonVaiTro";
-            this.cmbChonVaiTro.Size = new System.Drawing.Size(206, 32);
-            this.cmbChonVaiTro.TabIndex = 7;
-            this.cmbChonVaiTro.SelectedIndexChanged += new System.EventHandler(this.cmbChonVaiTro_SelectedIndexChanged);
             // 
             // dgvQuanLyKhachHang
             // 
@@ -300,6 +288,18 @@
             this.btnX.UseVisualStyleBackColor = true;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
+            // cmbChonVaiTro
+            // 
+            this.cmbChonVaiTro.FormattingEnabled = true;
+            this.cmbChonVaiTro.Items.AddRange(new object[] {
+            "Administrator",
+            "User"});
+            this.cmbChonVaiTro.Location = new System.Drawing.Point(332, 147);
+            this.cmbChonVaiTro.Name = "cmbChonVaiTro";
+            this.cmbChonVaiTro.Size = new System.Drawing.Size(206, 32);
+            this.cmbChonVaiTro.TabIndex = 7;
+            this.cmbChonVaiTro.SelectedIndexChanged += new System.EventHandler(this.cmbChonVaiTro_SelectedIndexChanged);
+            // 
             // frmQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -353,7 +353,6 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtVaiTro;
         private System.Windows.Forms.TextBox txtSoDu;
-        private System.Windows.Forms.ComboBox cmbChonVaiTro;
         private System.Windows.Forms.DataGridView dgvQuanLyKhachHang;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnHuy;
@@ -365,5 +364,6 @@
         private System.Windows.Forms.TextBox txtTimUser;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnX;
+        private System.Windows.Forms.ComboBox cmbChonVaiTro;
     }
 }

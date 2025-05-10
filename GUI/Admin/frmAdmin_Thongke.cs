@@ -15,6 +15,7 @@ using QuanLyAccount3Layer.DAL;
 using QuanLyAccount3Layer.GUI.Admin.mnuQuanLy;
 using System.Threading;
 using System.Security.AccessControl;
+using QuanLyAccount3Layer.GUI.Admin.mnuHeThong;
 
 namespace QuanLyAccount3Layer.GUI
 {
@@ -177,6 +178,12 @@ namespace QuanLyAccount3Layer.GUI
         private void btnX_Click(object sender, EventArgs e)
         {
             txtTimUser.Text = "";
+        }
+
+        private void mnuAdmin_HeThong_MaUuDai_Click(object sender, EventArgs e)
+        {
+            frmMaUuDai mdu = new frmMaUuDai();
+            mdu.Show();
         }
     }
 }

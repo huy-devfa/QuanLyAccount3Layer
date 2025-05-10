@@ -203,3 +203,57 @@ begin
 	update ThongTinThanhToan set TenCTK=@PTenCTK, TenNH=@PTenNH where STK=@Pstk
 end
 
+create table MaUuDai(
+	GiftCode char(100) not null primary key,
+	LoaiUuDai int,
+	UuDai int,
+	ThoiGianTaoUuDai datetime,
+	HanSuDungUuDai int,
+	ThoiGianHetHanUuDai datetime,
+	TrangThaiUuDai nvarchar(100),
+	LuotSuDung int
+)
+
+insert into MaUuDai(GiftCode,LoaiUuDai,UuDai,HanSuDungUuDai,ThoiGianHetHanUuDai,LuotSuDung) values('HappyNewYear',1,10,10,dateadd(day,10,GetDate()),100)
+
+select m.GiftCode,m.HanSuDungUuDai,l.TenUuDai,m.LuotSuDung,m.ThoiGianHetHanUuDai,m.ThoiGianTaoUuDai,m.TrangThaiUuDai,m.UuDai from MaUuDai m, LoaiUuDai l where m.LoaiUuDai = l.idLoaiUuDai
+
+select * from MaUuDai
+
+select count(GiftCode) 
+from MaUuDai 
+where GiftCode='cc' and ThoiGianHetHanUuDai < GETDATE()
+
+update MaUuDai Set LuotSuDung = 0 where GiftCode = 'HappyNewYear'
+
+alter table MaUuDai add constraint fk1_LoaiUuDai foreign key(LoaiUuDai) references LoaiUuDai(idLoaiUuDai)
+alter table MaUuDai add constraint df1_ThoiGianTaoUuDai default (Getdate()) for ThoiGianTaoUuDai
+alter table MaUuDai add constraint df2_TrangThaiUuDai default N'Còn hạn' for TrangThaiUuDai
+
+--Trigger update trang thai uu dai!
+CREATE TRIGGER trg_UpdateTrangThaiUuDai
+ON MaUuDai
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    -- Cập nhật trạng thái thành "Hết hạn" nếu đã quá ngày hết hạn
+    UPDATE MaUuDai
+    SET TrangthaiUuDai = 
+        CASE 
+            WHEN ThoiGianHetHanUuDai <= GETDATE() THEN 'Hết hạn'
+            ELSE TrangthaiUuDai 
+        END
+    WHERE ThoiGianHetHanUuDai <= GETDATE();
+END
+
+
+
+
+create table LoaiUuDai(
+	idLoaiUuDai int identity(1,1) not null primary key,
+	TenUuDai nvarchar(100),
+)
+
+select * from LoaiUuDai
+insert into LoaiUuDai(TenUuDai) values(N'Giảm giá')
+

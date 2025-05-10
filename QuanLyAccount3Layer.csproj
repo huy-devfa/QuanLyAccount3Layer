@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\LichSuGiaoDich.cs" />
+    <Compile Include="BLL\MaUuDai.cs" />
     <Compile Include="BLL\ThongTinThanhToan.cs" />
     <Compile Include="BLL\Users.cs" />
     <Compile Include="DAL\Providers.cs" />
@@ -445,6 +446,7 @@
     <Content Include="images\Banks\VPBank.png" />
     <Content Include="images\MoMat.png" />
     <Content Include="images\NhamMat.png" />
+    <None Include="Resources\redo.ico" />
     <None Include="Resources\find.ico" />
     <None Include="images\ShopTuDoi1.png" />
     <None Include="images\ShopTuDoi.png" />

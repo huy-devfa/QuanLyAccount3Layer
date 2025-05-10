@@ -56,9 +56,9 @@
             this.statusLoad = new System.Windows.Forms.ToolStripStatusLabel();
             this.dgvGiaoDichGanDay = new System.Windows.Forms.DataGridView();
             this.grboxGiaoDichGanDay = new System.Windows.Forms.GroupBox();
+            this.btnX = new System.Windows.Forms.Button();
             this.btnTimUser = new System.Windows.Forms.Button();
             this.txtTimUser = new System.Windows.Forms.TextBox();
-            this.btnX = new System.Windows.Forms.Button();
             this.mnuAdmin.SuspendLayout();
             this.grBoxTongKhachHang.SuspendLayout();
             this.grBoxTongTaiKhoanDaBan.SuspendLayout();
@@ -113,13 +113,13 @@
             // mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang
             // 
             this.mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang.Name = "mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang";
-            this.mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang.Size = new System.Drawing.Size(224, 26);
+            this.mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang.Size = new System.Drawing.Size(203, 26);
             this.mnuAdmin_HeThong_Lichsugiaodich_Lichsubanhang.Text = "Lịch sử bán hàng";
             // 
             // mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien
             // 
             this.mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien.Name = "mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien";
-            this.mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien.Size = new System.Drawing.Size(224, 26);
+            this.mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien.Size = new System.Drawing.Size(203, 26);
             this.mnuAdmin_HeThong_Lichsugiaodich_LichSuNapTien.Text = "Lịch sử nạp tiền";
             // 
             // mnuAdmin_HeThong_ThongTinThanhToan
@@ -134,6 +134,7 @@
             this.mnuAdmin_HeThong_MaUuDai.Name = "mnuAdmin_HeThong_MaUuDai";
             this.mnuAdmin_HeThong_MaUuDai.Size = new System.Drawing.Size(230, 26);
             this.mnuAdmin_HeThong_MaUuDai.Text = "Mã ưu đãi";
+            this.mnuAdmin_HeThong_MaUuDai.Click += new System.EventHandler(this.mnuAdmin_HeThong_MaUuDai_Click);
             // 
             // mnuAdmin_HeThong_Thoat
             // 
@@ -154,19 +155,19 @@
             // mnuAdmin_QuanLy_ThemLoaiTaiKhoan
             // 
             this.mnuAdmin_QuanLy_ThemLoaiTaiKhoan.Name = "mnuAdmin_QuanLy_ThemLoaiTaiKhoan";
-            this.mnuAdmin_QuanLy_ThemLoaiTaiKhoan.Size = new System.Drawing.Size(224, 26);
+            this.mnuAdmin_QuanLy_ThemLoaiTaiKhoan.Size = new System.Drawing.Size(223, 26);
             this.mnuAdmin_QuanLy_ThemLoaiTaiKhoan.Text = "Thêm loại tài khoản";
             // 
             // mnuAdmin_QuanLy_QuanLyTaiKhoan
             // 
             this.mnuAdmin_QuanLy_QuanLyTaiKhoan.Name = "mnuAdmin_QuanLy_QuanLyTaiKhoan";
-            this.mnuAdmin_QuanLy_QuanLyTaiKhoan.Size = new System.Drawing.Size(224, 26);
+            this.mnuAdmin_QuanLy_QuanLyTaiKhoan.Size = new System.Drawing.Size(223, 26);
             this.mnuAdmin_QuanLy_QuanLyTaiKhoan.Text = "Quản lý tài khoản";
             // 
             // mnuAdmin_QuanLy_QuanLyKhachHang
             // 
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Name = "mnuAdmin_QuanLy_QuanLyKhachHang";
-            this.mnuAdmin_QuanLy_QuanLyKhachHang.Size = new System.Drawing.Size(224, 26);
+            this.mnuAdmin_QuanLy_QuanLyKhachHang.Size = new System.Drawing.Size(223, 26);
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Text = "Quản lý khách hàng";
             this.mnuAdmin_QuanLy_QuanLyKhachHang.Click += new System.EventHandler(this.mnuAdmin_QuanLy_QuanLyKhachHang_Click);
             // 
@@ -313,7 +314,7 @@
             // 
             this.dgvGiaoDichGanDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGiaoDichGanDay.Location = new System.Drawing.Point(20, 94);
-            this.dgvGiaoDichGanDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvGiaoDichGanDay.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGiaoDichGanDay.Name = "dgvGiaoDichGanDay";
             this.dgvGiaoDichGanDay.RowHeadersVisible = false;
             this.dgvGiaoDichGanDay.RowHeadersWidth = 51;
@@ -329,35 +330,13 @@
             this.grboxGiaoDichGanDay.Controls.Add(this.txtTimUser);
             this.grboxGiaoDichGanDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grboxGiaoDichGanDay.Location = new System.Drawing.Point(21, 444);
-            this.grboxGiaoDichGanDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grboxGiaoDichGanDay.Margin = new System.Windows.Forms.Padding(4);
             this.grboxGiaoDichGanDay.Name = "grboxGiaoDichGanDay";
-            this.grboxGiaoDichGanDay.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grboxGiaoDichGanDay.Padding = new System.Windows.Forms.Padding(4);
             this.grboxGiaoDichGanDay.Size = new System.Drawing.Size(1129, 347);
             this.grboxGiaoDichGanDay.TabIndex = 5;
             this.grboxGiaoDichGanDay.TabStop = false;
             this.grboxGiaoDichGanDay.Text = "Lịch sử dòng tiền";
-            // 
-            // btnTimUser
-            // 
-            this.btnTimUser.Image = global::QuanLyAccount3Layer.Properties.Resources.find;
-            this.btnTimUser.Location = new System.Drawing.Point(1053, 28);
-            this.btnTimUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTimUser.Name = "btnTimUser";
-            this.btnTimUser.Size = new System.Drawing.Size(64, 54);
-            this.btnTimUser.TabIndex = 18;
-            this.btnTimUser.UseVisualStyleBackColor = true;
-            this.btnTimUser.Click += new System.EventHandler(this.btnTimUser_Click);
-            // 
-            // txtTimUser
-            // 
-            this.txtTimUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimUser.Location = new System.Drawing.Point(784, 39);
-            this.txtTimUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTimUser.Name = "txtTimUser";
-            this.txtTimUser.Size = new System.Drawing.Size(260, 34);
-            this.txtTimUser.TabIndex = 17;
-            this.txtTimUser.Text = "Nhập tên cần tìm..";
-            this.txtTimUser.TextChanged += new System.EventHandler(this.txtTimUser_TextChanged);
             // 
             // btnX
             // 
@@ -368,6 +347,28 @@
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // btnTimUser
+            // 
+            this.btnTimUser.Image = global::QuanLyAccount3Layer.Properties.Resources.find;
+            this.btnTimUser.Location = new System.Drawing.Point(1053, 28);
+            this.btnTimUser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimUser.Name = "btnTimUser";
+            this.btnTimUser.Size = new System.Drawing.Size(64, 54);
+            this.btnTimUser.TabIndex = 18;
+            this.btnTimUser.UseVisualStyleBackColor = true;
+            this.btnTimUser.Click += new System.EventHandler(this.btnTimUser_Click);
+            // 
+            // txtTimUser
+            // 
+            this.txtTimUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimUser.Location = new System.Drawing.Point(784, 39);
+            this.txtTimUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimUser.Name = "txtTimUser";
+            this.txtTimUser.Size = new System.Drawing.Size(260, 34);
+            this.txtTimUser.TabIndex = 17;
+            this.txtTimUser.Text = "Nhập tên cần tìm..";
+            this.txtTimUser.TextChanged += new System.EventHandler(this.txtTimUser_TextChanged);
             // 
             // frmAdmin_Thongke
             // 
